@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'mfa/index'
+  get 'mfa/new'
+  get 'mfa/create'
   get 'home/index'
   get 'sessions/new'
   get 'sessions/create'
