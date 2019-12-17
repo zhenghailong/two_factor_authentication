@@ -1,2 +1,19 @@
-<h1>Mfa#new</h1>
-<p>Find me in app/views/mfa/new.html.erb</p>
+<p id="alert"><%= alert %></p>
+
+<h1>コード入力</h1>
+
+<%= form_tag mfa_auth_path do |form| %>
+  <div class="field'>
+    <%= label_tag :認証コード %>
+    <%= text_field_tag :otp_code %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= submit_tag "検証" %>
+  </div>
+
+  <br>
+  <div>
+    <%= link_to "ログイン画面に戻る", login_url %>
+  </div>
+<% end %>
