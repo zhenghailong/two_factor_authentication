@@ -1,6 +1,10 @@
-<h1>Mfa#index</h1>
-<p>Find me in app/views/mfa/index.html.erb</p>
+<h1>認証デバイス登録</h1>
+<p>下記のQRコードをスキャン後にコード認証を行ってください。</p>
 
 <div class="qrcode">
   <%= raw @qr.as_html %>
+</div>
+
+<div>
+<%= link_to "コード認証をする", mfa_auth_url %>
 </div>
